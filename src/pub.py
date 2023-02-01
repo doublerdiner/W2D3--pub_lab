@@ -28,15 +28,10 @@ class Pub:
     def stock_check(self):
         names = []
         stock = []
-        values = []
+        total = 0
         for item in self.drinks:
             names.append(item["name"])
             stock.append(item["stock"])
-            values.append(item["price"])
-        total = 0
-        index = 0 
-        for i in stock:
-            total += stock[index] * values[index]
-            index += 1
+            total += item["stock"]*item["price"]
             
         return f"There are {stock[0]} servings of {names[0].lower()}, {stock[1]} servings of {names[1].lower()} and {stock[2]} servings of {names[2].lower()}. The total stock value is {total}"

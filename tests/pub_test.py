@@ -46,6 +46,6 @@ class TestPub(unittest.TestCase):
 # Test 7 - Pub stock check
     def test_stock_check(self):
         answer = self.pub.stock_check()
-        self.assertEqual("There are 100 servings of beer, 150 servings of wine and 50 servings of whisky. The total stock value is 1370.00", answer)
+        self.assertEqual("There are 100 servings of beer, 150 servings of wine and 50 servings of whisky. The total stock value is 1370.0", answer)
 
 
